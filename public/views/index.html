@@ -4,28 +4,42 @@
   <title>Spotify Search</title>
   <script type="text/javascript" src="bower_components/angular/angular.min.js"></script>
   <link rel="stylesheet" type="text/css" href="bower_components/bootstrap/dist/css/bootstrap.min.css">
+  <link rel="stylesheet" type="text/css" href="../css/style.css">
 </head>
 <body>
 
 <nav></nav>
 
-
-<div class="row">
-  <div class="container-fluid">
-    <div class="col-md-6 col-md-offset-3" ng-controller="mainController">
+<div class="container-fluid" ng-controller="mainController">
+  <div class="row" id="firstRow">
+    <div class="col-md-6 col-md-offset-3">
       <form class="inline-form">
-        <input type="text" class="form-control" ng-model="search" placeholder="Search Spotify for Artists, Songs, Albums, and more!">
-        <button type="submit" class="btn btn-primary" ng-click="loadResults($event)">Search</button>
+        <div class="input-group">
+          <input type="text" id="searchBox" class="form-control" ng-model="search" placeholder="Search Spotify for Artists, Songs, Albums, and more!">
+          <span class="input-group-btn"><button type="submit" class="btn btn-primary" ng-click="loadResults($event)">Search</button></span>
+        </div>
       </form>
+      <form class="form-inline">
+        <p>Search By:&nbsp;&nbsp;&nbsp; <label class="radio-inline">
+            <input type="radio" value="option1"> Artist
+          </label>
+          <label class="radio-inline">
+            <input type="radio" value="option2"> Album
+          </label></p>
+      </form>
+    </div><!-- End col-md-8 -->
+  </div><!-- End Row -->
+  <div class="row">
+    <div class="col-md-12">
       <div class="result">
         <!-- results go here -->
       </div>
     </div>
-  </div>
-</div>
+  </div><!-- End Row -->
+</div><!-- End Container -->
 
 
-<script type="text/javascript" src="bower_components/jquery/"></script>
+<script type="text/javascript" src="bower_components/jquery/dist/jquery.min.js"></script>
 <script type="text/javascript" src="bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
 <script type="text/javascript" src="../js/app.js"></script>
 </body>

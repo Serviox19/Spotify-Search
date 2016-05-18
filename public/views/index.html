@@ -21,10 +21,10 @@
       </form>
       <form class="form-inline">
         <p>Search By:&nbsp;&nbsp;&nbsp; <label class="radio-inline">
-            <input type="radio" value="option1"> Artist
+            <input type="radio" ng-model="searchBy" value="byArtist"> Artist
           </label>
           <label class="radio-inline">
-            <input type="radio" value="option2"> Album
+            <input type="radio" ng-model="searchBy" value="byAlbum"> Album
           </label></p>
       </form>
     </div><!-- End col-md-8 -->
@@ -32,9 +32,9 @@
   <div class="row">
     <div class="col-md-12">
       <div class="result">
-        <!-- results go here -->
-      </div>
-    </div>
+        <!-- Empty -->
+      </div><!-- End Results Div -->
+    </div><!-- End Col -->
   </div><!-- End Row -->
 </div><!-- End Container -->
 
